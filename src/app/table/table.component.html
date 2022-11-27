@@ -1,0 +1,23 @@
+<div class="overflow-x-auto relative">
+  <table
+    class="w-full text-sm text-left text-gray-500 dark:text-gray-400 table-fixed"
+  >
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <ng-container *ngTemplateOutlet="tableHead"></ng-container>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let row of data"
+        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+      >
+        <ng-container
+          *ngTemplateOutlet="tableRow; context: { $implicit: row }"
+        ></ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>

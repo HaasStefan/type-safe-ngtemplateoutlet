@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person } from './person.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'type-safe-ngtemplateoutlet';
+  persons: Person[] = [
+    {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 25
+    },
+    {
+      firstName: 'Jane',
+      lastName: 'Doe',
+      age: 31
+    },
+  ];
 }
